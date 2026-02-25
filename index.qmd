@@ -1,0 +1,9 @@
+---
+title: "Quiz 2"
+---
+The Gapminder dataset includes country based information on continent, year, life expectancy, population, and GDP per capita.
+
+## Pages
+
+- [About](about.qmd)
+- [Create Dataset](create-dataset.ipynb)

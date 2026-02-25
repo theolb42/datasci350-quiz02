@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "create-dataset.html",
+    "href": "create-dataset.html",
+    "title": "Create the Gapminder dataset",
+    "section": "",
+    "text": "# Import necessary libraries\nimport pandas as pd\nfrom gapminder import gapminder\n\n# Rename 'lifeExp' to 'life_expectancy' and 'gdpPercap' to 'gdp_per_capita'\ngapminder = gapminder.rename(columns={'lifeExp': 'life_expectancy',\n                                      'pop': 'population_millions', \n                                      'gdpPercap': 'gdp_per_capita'})\n\n# Convert population to millions\ngapminder['population_millions'] = gapminder['population_millions'] / 1_000_000\n\n# Create a new pandas DataFrame from the modified gapminder data\ngapminder_df = pd.DataFrame(gapminder)\n\n# Save the DataFrame as a CSV file\ngapminder_df.to_csv('gapminder.csv', index=False)\n\n# Print the first 3 rows of the DataFrame\nprint(gapminder_df.head(3))\n\n       country continent  year  life_expectancy  population_millions  \\\n0  Afghanistan      Asia  1952           28.801             8.425333   \n1  Afghanistan      Asia  1957           30.332             9.240934   \n2  Afghanistan      Asia  1962           31.997            10.267083   \n\n   gdp_per_capita  \n0      779.445314  \n1      820.853030  \n2      853.100710"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "life-gdp.html",
+    "href": "life-gdp.html",
+    "title": "Quiz 2",
+    "section": "",
+    "text": "title: “Life Expectancy and GDP per Capita” execute: echo: true —\nThis page shows how life expectancy relates to GDP per capita in the Gapminder dataset.\nimport pandas as pd import matplotlib.pyplot as plt\ndf = pd.read_csv(“gapminder.csv”)\nplt.scatter(df[“gdp_per_capita”], df[“life_expectancy”]) plt.xlabel(“GDP per capita)”) plt.ylabel(“Life expectancy”) plt.show()"
+  },
+  {
+    "objectID": "country.html",
+    "href": "country.html",
+    "title": "Country Analysis",
+    "section": "",
+    "text": "This page shows how life expectancy, GDP per capita, and population change over time for one country.\nimport pandas as pd import matplotlib.pyplot as plt\ngapminder = pd.read_csv(“gapminder.csv”)\ncountry_name = “Brazil”\ndf = gapminder[gapminder[“country”] == country_name].sort_values(“year”)\nplt.figure() plt.plot(df[“year”], df[“life_expectancy”]) plt.xlabel(“Year”) plt.ylabel(“Life Expectancy”) plt.title(f”Life Expectancy Over Time: {country_name}“) plt.show()\nplt.figure() plt.plot(df[“year”], df[“gdp_per_capita”]) plt.xlabel(“Year”) plt.ylabel(“GDP per Capita”) plt.title(f”GDP per Capita Over Time: {country_name}“) plt.show()\nplt.figure() plt.plot(df[“year”], df[“population_millions”]) plt.xlabel(“Year”) plt.ylabel(“Population (millions)”) plt.title(f”Population Over Time: {country_name}“) plt.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quiz 2",
+    "section": "",
+    "text": "The Gapminder dataset includes country based information on continent, year, life expectancy, population, and GDP per capita."
+  },
+  {
+    "objectID": "index.html#pages",
+    "href": "index.html#pages",
+    "title": "Quiz 2",
+    "section": "Pages",
+    "text": "Pages\n\nAbout\nCreate Dataset"
+  },
+  {
+    "objectID": "life-population.html",
+    "href": "life-population.html",
+    "title": "Quiz 2",
+    "section": "",
+    "text": "title: “Life Expectancy and Population” execute: echo: true —\nThis page explores the relationship between life expectancy and population (in millions) using the Gapminder dataset.\nimport pandas as pd import matplotlib.pyplot as plt\ngapminder = pd.read_csv(“gapminder.csv”)\nplt.figure() plt.scatter(gapminder[“population_millions”], gapminder[“life_expectancy”]) plt.xlabel(“Population (millions)”) plt.ylabel(“Life Expectancy”) plt.title(“Life Expectancy vs Population”) plt.show()"
+  }
+]

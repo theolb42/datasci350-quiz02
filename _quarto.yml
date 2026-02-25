@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Quiz 2"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: create-dataset.ipynb
+        text: Create Dataset
+      - href: life-gdp.qmd
+        text: Life Exp & GDP
+      - href: life-population.qmd
+        text: Life Exp & Pop
+      - href: country.qmd
+        text: Country Analysis
+
+format:
+  html:
+    theme:
+      - cyborg
+    css: styles.css
+    toc: true
+
