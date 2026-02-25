@@ -7,3 +7,6 @@ The Gapminder dataset includes country based information on continent, year, lif
 
 - [About](about.qmd)
 - [Create Dataset](create-dataset.ipynb)
+- [Life Expectancy and GDP per Capita](life-gdp.qmd)
+- [Life Expectancy and Population](life-population.qmd)
+- [Country Analysis](country.qmd)
