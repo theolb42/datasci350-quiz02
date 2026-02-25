@@ -1,7 +1,9 @@
 ---
 title: "Country Analysis"
+engine: jupyter
 execute:
   echo: true
+  eval: true
 ---
 
 This page shows how life expectancy, GDP per capita, and population change over time for one country.

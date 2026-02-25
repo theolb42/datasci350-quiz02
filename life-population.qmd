@@ -1,6 +1,9 @@
+---
 title: "Life Expectancy and Population"
+engine: jupyter
 execute:
   echo: true
+  eval: true
 ---
 
 This page explores the relationship between life expectancy and population (in millions) using the Gapminder dataset.

@@ -16,9 +16,9 @@
   {
     "objectID": "life-gdp.html",
     "href": "life-gdp.html",
-    "title": "Quiz 2",
+    "title": "Life Expectancy and GDP per Capita",
     "section": "",
-    "text": "title: “Life Expectancy and GDP per Capita” execute: echo: true —\nThis page shows how life expectancy relates to GDP per capita in the Gapminder dataset.\nimport pandas as pd import matplotlib.pyplot as plt\ndf = pd.read_csv(“gapminder.csv”)\nplt.scatter(df[“gdp_per_capita”], df[“life_expectancy”]) plt.xlabel(“GDP per capita)”) plt.ylabel(“Life expectancy”) plt.show()"
+    "text": "This page shows how life expectancy relates to GDP per capita in the Gapminder dataset.\nimport pandas as pd import matplotlib.pyplot as plt\ndf = pd.read_csv(“gapminder.csv”)\nplt.figure() plt.scatter(df[“gdp_per_capita”], df[“life_expectancy”]) plt.xlabel(“GDP per capita”) plt.ylabel(“Life expectancy”) plt.show()"
   },
   {
     "objectID": "country.html",
@@ -44,8 +44,8 @@
   {
     "objectID": "life-population.html",
     "href": "life-population.html",
-    "title": "Quiz 2",
+    "title": "Life Expectancy and Population",
     "section": "",
-    "text": "title: “Life Expectancy and Population” execute: echo: true —\nThis page explores the relationship between life expectancy and population (in millions) using the Gapminder dataset.\nimport pandas as pd import matplotlib.pyplot as plt\ngapminder = pd.read_csv(“gapminder.csv”)\nplt.figure() plt.scatter(gapminder[“population_millions”], gapminder[“life_expectancy”]) plt.xlabel(“Population (millions)”) plt.ylabel(“Life Expectancy”) plt.title(“Life Expectancy vs Population”) plt.show()"
+    "text": "This page explores the relationship between life expectancy and population (in millions) using the Gapminder dataset.\nimport pandas as pd import matplotlib.pyplot as plt\ngapminder = pd.read_csv(“gapminder.csv”)\nplt.figure() plt.scatter(gapminder[“population_millions”], gapminder[“life_expectancy”]) plt.xlabel(“Population (millions)”) plt.ylabel(“Life Expectancy”) plt.title(“Life Expectancy vs Population”) plt.show()"
   }
 ]
