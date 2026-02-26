@@ -19,3 +19,4 @@ plt.scatter(df["gdp_per_capita"], df["life_expectancy"])
 plt.xlabel("GDP per capita")
 plt.ylabel("Life expectancy")
 plt.show()
+```

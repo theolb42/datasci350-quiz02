@@ -151,14 +151,29 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This page shows how life expectancy, GDP per capita, and population change over time for one country.</p>
-<p>#| echo: false #| message: false</p>
-<p>import pandas as pd import matplotlib.pyplot as plt</p>
-<p>gapminder = pd.read_csv(“gapminder.csv”)</p>
-<p>country_name = “Brazil”</p>
-<p>df = gapminder[gapminder[“country”] == country_name].sort_values(“year”)</p>
-<p>plt.figure() plt.plot(df[“year”], df[“life_expectancy”]) plt.xlabel(“Year”) plt.ylabel(“Life Expectancy”) plt.title(f”Life Expectancy Over Time: {country_name}“) plt.show()</p>
-<p>plt.figure() plt.plot(df[“year”], df[“gdp_per_capita”]) plt.xlabel(“Year”) plt.ylabel(“GDP per Capita”) plt.title(f”GDP per Capita Over Time: {country_name}“) plt.show()</p>
-<p>plt.figure() plt.plot(df[“year”], df[“population_millions”]) plt.xlabel(“Year”) plt.ylabel(“Population (millions)”) plt.title(f”Population Over Time: {country_name}“) plt.show()</p>
+<div id="a7855156" class="cell" data-message="false" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="country_files/figure-html/cell-2-output-1.png" width="585" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="country_files/figure-html/cell-2-output-2.png" width="602" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="country_files/figure-html/cell-2-output-3.png" width="593" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 

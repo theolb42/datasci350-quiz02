@@ -20,3 +20,4 @@ plt.xlabel("Population (millions)")
 plt.ylabel("Life Expectancy")
 plt.title("Life Expectancy vs Population")
 plt.show()
+```
